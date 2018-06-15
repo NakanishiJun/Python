@@ -10,25 +10,25 @@ def counts(code):
     code_split = list(code)
     for x in code_split:
         num += x
-    print(num)
+    #print(num)
     numbers = list(num)
-    print(numbers)
+    #print(numbers)
     
     for m in numbers:
         number_sum += code_list[m]
     number_list = list(number_sum)
 
-    print(number_sum)
+    print(len(number_sum))
 
-    if int(number_sum) % 2 == 0:
+    if int(len(number_sum)) % 2 == 0:
         for i in number_list[::2]:
-            sum1 += int(i)*3
+            sum1 += int(i)
         for n in number_list[1::2]:
-            sum2 += int(n)
+            sum2 += int(n)*3
     else:
         for ii in number_list[::2]:
-            sum1 += int(ii)
-        for nn in number_list[::2]:
+            sum1 += int(ii)*3
+        for nn in number_list[1::2]:
             sum2 += int(nn)
     
     print(sum1+sum2)
